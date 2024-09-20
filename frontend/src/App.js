@@ -10,9 +10,11 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import { Context } from "./context/Context";
 import Contact from "./pages/contact/Contact";
-import About from "./pages/about/About"
+import About from "./pages/about/About";
+
 export default function App() {
   const { user } = useContext(Context);
+  
   return (
     <Router>
       <TopBar />
@@ -23,12 +25,10 @@ export default function App() {
         <Route path="/write" element={user ? <Write /> : <Register />} />
         <Route path="/settings" element={user ? <Settings /> : <Register />} />
         <Route path="/posts" element={<Posts />} />
-        <Route path='/posts/:id' element={<Single/>} />
+        <Route path="/posts/:id" element={<Single />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
-
       </Routes>
     </Router>
   );
 }
-

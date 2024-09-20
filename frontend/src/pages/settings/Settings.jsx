@@ -11,35 +11,42 @@ export default function Settings() {
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:3002/images/"
+  const PF = `${process.env.REACT_APP_BACKEND_URL}/images/`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: "UPDATE_START" });
+
     const updatedUser = {
       userId: user._id,
       username,
       email,
       password,
     };
+
     if (file) {
       const data = new FormData();
       const filename = Date.now() + file.name;
       data.append("name", filename);
       data.append("file", file);
       updatedUser.profilePic = filename;
+
       try {
-        await axios.post("/upload", data);
-      } catch (err) {}
+        await axios.post(`${process.env.REACT_APP_BACKEND_URL}/upload`, data);
+      } catch (err) {
+        console.error("Error uploading file:", err);
+      }
     }
+
     try {
-      const res = await axios.put("/users/" + user._id, updatedUser);
+      const res = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/users/${user._id}`, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {
       dispatch({ type: "UPDATE_FAILURE" });
     }
   };
+
   return (
     <div className="settings">
       <div className="settingsWrapper">
@@ -51,7 +58,7 @@ export default function Settings() {
           <label className="heading">Profile Picture</label>
           <div className="settingsPP">
             <img
-              src={file ? URL.createObjectURL(file) : PF+user.profilePic}
+              src={file ? URL.createObjectURL(file) : PF + user.profilePic}
               alt=""
             />
             <label htmlFor="fileInput">
@@ -96,7 +103,6 @@ export default function Settings() {
           )}
         </form>
       </div>
-      
     </div>
   );
 }
