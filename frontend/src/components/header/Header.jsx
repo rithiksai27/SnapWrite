@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <div className="header">
       <div className="headerTitles">
-        <span className="headerTitlelg">SnapWrite</span>
+        <span className="headerTitlelg">WorkShopHub</span>
       </div>
       <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="500">
         <div className="carousel-inner">
@@ -32,9 +32,7 @@ export default function Header() {
         </button>
       </div>
 
-      <div className="captionThis">
-        <h2>Write Your Story</h2>
-      </div>
+     
       <div className="videobit">
         <video 
           src={`${backendURL}/videos/intro.mp4`} 
@@ -51,6 +49,7 @@ export default function Header() {
         <h2>Track Your Changes</h2>
       </div>
 
+<<<<<<< HEAD
       <div className="storyForm">
         <div className="storyInner">
           <h1>Coordinate day-to-day tasks</h1>
@@ -60,11 +59,24 @@ export default function Header() {
           <p>Organize, tag, and highlight posts to enhance user experience, making it effortless for readers to discover and explore new and relevant content.</p>
         </div>
       </div>
+=======
+      <div class="storyForm">
+      <div class="storyInner">
+    <h1>Coordinate Learning Activities</h1>
+    <h3>Utilize the dashboard to manage your courses, track student progress, and adjust instructional strategies.</h3>
+    <p>Monitor student engagement through analytics, identifying which activities resonate most and guiding course improvements.</p>
+    <p>Set customized permissions for student collaboration, allowing them to participate in discussions and share resources effectively.</p>
+    <p>Organize, tag, and highlight learning materials to enhance the user experience, making it easy for students to find and explore relevant content.</p>
+</div>
+
+</div>
+>>>>>>> origin/main
 
       <div className="captionThis">
         <h2>Connect, Share, Engage</h2>
       </div>
 
+<<<<<<< HEAD
       <div className="description-container">
         <div className="card">
           <h2 className="card-title">Out there, your audience is waiting.</h2>
@@ -103,6 +115,47 @@ export default function Header() {
           </p>
         </div>
       </div>
+=======
+      <div class="description-container">
+  <div class="card">
+    <h2 class="card-title">Connect Instructors and Students.</h2>
+    <p class="card-text">
+      WorkShopHub provides a platform for instructors and students to engage in meaningful ways.
+    </p>
+  </div>
+  <div class="card">
+    <h2 class="card-title">Enhance Learning Experiences.</h2>
+    <p class="card-text">
+      Utilize interactive tools to foster collaboration and enrich the learning process.
+    </p>
+  </div>
+  <div class="card">
+    <h2 class="card-title">Real-Time Feedback.</h2>
+    <p class="card-text">
+      Instructors can give immediate feedback, helping students improve and stay motivated.
+    </p>
+  </div>
+  <div class="card">
+    <h2 class="card-title">Create Engaging Content.</h2>
+    <p class="card-text">
+      Share resources, assignments, and multimedia to create an immersive learning environment.
+    </p>
+  </div>
+  <div class="card">
+    <h2 class="card-title">Foster Community.</h2>
+    <p class="card-text">
+      Build a supportive community where students can collaborate and learn from each other.
+    </p>
+  </div>
+  <div class="card">
+    <h2 class="card-title">Stay Updated on Courses.</h2>
+    <p class="card-text">
+      Use notifications and updates to keep everyone informed about important course information.
+    </p>
+  </div>
+</div>
+
+>>>>>>> origin/main
 
       <div className="captionThis">
         <h2>Empower, Inspire, Share</h2>

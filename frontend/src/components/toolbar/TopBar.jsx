@@ -29,6 +29,7 @@ export default function TopBar() {
             <Link className="link" to="/">HOME</Link>
           </li>
           <li className="topListItem">
+<<<<<<< HEAD
             <Link className="link" to="/about">ABOUT</Link>
           </li>
           <li className="topListItem">
@@ -39,6 +40,26 @@ export default function TopBar() {
           </li>
           <li className="topListItem">
             <Link className="link" to="/posts">POSTS</Link>
+=======
+            <Link className="link" to="/contact">
+              CONTACT
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/contact">
+              SCHEDULE
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/contact">
+              PAST SESSIONS
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/contact">
+              FEEDBACK
+            </Link>
+>>>>>>> origin/main
           </li>
           <li className="topListItem" onClick={handleLogout}>
             {user && "LOGOUT"}
@@ -46,6 +67,7 @@ export default function TopBar() {
         </ul>
       </div>
       <div className="topRight">
+<<<<<<< HEAD
         {user ? (
           <Link to="/settings">
             <img className="topImg" src={PF + user.profilePic} alt="" />
@@ -65,7 +87,41 @@ export default function TopBar() {
           </ul>
         )}
         <i className="topSearchIcon fas fa-search"></i>
+=======
+  {user ? (
+    <Link to="/settings">
+      <img className="topImg" src={PF + user.profilePic} alt="" />
+    </Link>
+  ) : (
+    <ul className="topList">
+      <li className="topListItem">
+        <Link className="link" to="/login">
+          <button type="button" className="btn btn-outline-secondary">
+            LOGIN
+          </button>
+        </Link>
+      </li>
+      <li className="topListItem">
+        <Link className="link" to="/admin">
+          <button type="button" className="btn btn-outline-secondary">
+            ADMIN
+          </button>
+        </Link>
+      </li>
+      <li className="topListItem">
+        <Link className="link" to="/register">
+          <button type="button" className="btn btn-outline-secondary">
+            REGISTER
+          </button>
+        </Link>
+      </li>
+    </ul>
+  )}
+  
+  <i className="topSearchIcon fas fa-search"></i>
+</div>
+>>>>>>> origin/main
       </div>
-    </div>
+
   );
 }
