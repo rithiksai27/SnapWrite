@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 # BloggingWebsite
-=======
-# SessionManagement
->>>>>>> origin/main
+Deployment Link: https://blogging-snapwrite.vercel.app/
